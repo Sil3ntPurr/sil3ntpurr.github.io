@@ -183,7 +183,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <div class="easter-egg-message">
                 <h2>OULAH !</h2>
                 <p>EH !</p>
-                <p>Une pause s'impose ?</p>
+                <p>slc nysqc q'gknmqc ?</p>
             </div>
         </div>
     `;
