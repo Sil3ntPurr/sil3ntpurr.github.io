@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compétences - Portfolio Sil3ntPurr</title>
+    <link rel="stylesheet" href="../static/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="side-menu">
+        <ul>
+            <li><a href="../index.html"><i class="fas fa-user"></i> À propos</a></li>
+            <li><a href="skills.html" class="active"><i class="fas fa-cogs"></i> Compétences</a></li>
+            <li><a href="certifications.html"><i class="fas fa-certificate"></i> Certifications</a></li>
+            <li><a href="blog.html"><i class="fas fa-blog"></i> Blog</a></li>
+            <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="modal-overlay active">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="profile-container">
+                    <img src="../assets/me.png" alt="Profile" class="profile-image">
+                    <div class="animation-box">
+                        <div class="circle"></div>
+                        <div class="square"></div>
+                        <div class="triangle"></div>
+                    </div>
+                </div>
+                <h1 class="title">Compétences</h1>
+                <p class="subtitle">Expertise technique</p>
+            </div>
+            
+            <div class="modal-body">
+                <section class="skills-section">
+                    <div class="skills-grid">
+                        <div class="skill-card">
+                            <i class="fas fa-shield-alt"></i>
+                            <h3>Pentesting</h3>
+                            <p>Tests d'intrusion et évaluation de la sécurité</p>
+                            <ul class="skill-list">
+                                <li>Tests d'intrusion web</li>
+                                <li>Tests d'intrusion réseau</li>
+                                <li>Tests d'intrusion applicatifs</li>
+                                <li>Tests d'intrusion mobiles</li>
+                            </ul>
+                        </div>
+
+                        <div class="skill-card">
+                            <i class="fas fa-lock"></i>
+                            <h3>Sécurité Réseau</h3>
+                            <p>Protection des infrastructures réseau</p>
+                            <ul class="skill-list">
+                                <li>Analyse de vulnérabilités</li>
+                                <li>Configuration de pare-feu</li>
+                                <li>Sécurisation des protocoles</li>
+                                <li>Analyse de trafic</li>
+                            </ul>
+                        </div>
+
+                        <div class="skill-card">
+                            <i class="fas fa-bug"></i>
+                            <h3>Analyse de Vulnérabilités</h3>
+                            <p>Détection et correction des failles de sécurité</p>
+                            <ul class="skill-list">
+                                <li>Scanning de vulnérabilités</li>
+                                <li>Analyse de code</li>
+                                <li>Tests de sécurité</li>
+                                <li>Évaluation des risques</li>
+                            </ul>
+                        </div>
+                        <div class="skill-card">
+                            <i class="fas fa-bug"></i>
+                            <h3>Red Team</h3>
+                            <p>Infiltration fine</p>
+                            <ul class="skill-list">
+                                <li>Utilisation d'outils manuel dit "classique"</li>
+                                <li>Analyse de systèmes physiques</li>
+                                <li>Tests d'intrusion physique</li>
+                                <li>Évaluation des risques</li>
+                            </ul>
+                        </div>
+
+                        <div class="skill-card">
+                            <i class="fas fa-code"></i>
+                            <h3>Développement Sécurisé</h3>
+                            <p>Audit de code et bonnes pratiques</p>
+                            <ul class="skill-list">
+                                <li>Revue de code</li>
+                                <li>Tests de sécurité</li>
+                                <li>Bonnes pratiques OWASP</li>
+                                <li>Sécurisation des APIs</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <script src="../static/script.js"></script>
+</body>
+</html> 

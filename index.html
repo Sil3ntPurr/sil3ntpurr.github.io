@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Sil3ntPurr</title>
+    <link rel="stylesheet" href="./static/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="side-menu">
+        <ul>
+            <li><a href="./index.html#about" class="active"><i class="fas fa-user"></i> À propos</a></li>
+            <li><a href="./pages/skills.html"><i class="fas fa-cogs"></i> Compétences</a></li>
+            <li><a href="./pages/certifications.html"><i class="fas fa-certificate"></i> Certifications</a></li>
+            <li><a href="./pages/blog.html"><i class="fas fa-blog"></i> Blog</a></li>
+            <li><a href="./pages/contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="modal-overlay" id="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="title">Étudiant en cybersécurité</h1>
+                <p class="subtitle">Maintenance des systèmes & pentesting</p>
+                <p class="subtitle">Purple Team</p>
+            </div>
+            
+            <div class="modal-body">
+                <div class="profile-container">
+                    <img src="./assets/me.png" alt="Photo de profil" class="profile-image">
+                    <div class="animation-box">
+                        <div class="circle"></div>
+                        <div class="square"></div>
+                        <div class="triangle"></div>
+                    </div>
+                </div>
+
+                <section id="about" class="about-section">
+                    <h2>À propos de moi</h2>
+                    <p>Étudiant en sécurité informatique avec une expertise en tests de pénétration, analyse de vulnérabilités et réponse aux incidents. Passionné par la protection des systèmes et la prévention des cyberattaques.</p>
+                </section>
+
+                <section id="skills" class="skills-section">
+                    <h2>Mes Domaines d'Expertise</h2>
+                    <div class="skills-grid">
+                        <a href="./pages/skills.html" class="skill-card">
+                            <i class="fas fa-shield-alt"></i>
+                            <h3>Pentesting</h3>
+                            <p>Tests d'intrusion et évaluation de la sécurité</p>
+                        </a>
+                        <a href="./pages/skills.html" class="skill-card">
+                            <i class="fas fa-lock"></i>
+                            <h3>Sécurité Réseau</h3>
+                            <p>Protection des infrastructures réseau</p>
+                        </a>
+                        <a href="./pages/skills.html" class="skill-card">
+                            <i class="fas fa-bug"></i>
+                            <h3>Analyse de Vulnérabilités</h3>
+                            <p>Détection et correction des failles de sécurité</p>
+                        </a>
+                    </div>
+                </section>
+
+                <section id="certifications" class="certifications-section">
+                    <h2>Certifications</h2>
+                    <div class="skills-grid">
+                        <a href="https://certs.ine.com/4114dbce-9bfc-4edd-ac28-371aad15ab41" target="_blank" class="skill-card">
+                            <i class="fas fa-certificate"></i>
+                            <h3>eJPT</h3>
+                            <p>eLearnSecurity Junior Penetration Tester</p>
+                        </a>
+                        <a href="https://tryhackme.com/p/Sil3ntPurr" target="_blank" class="skill-card">
+                            <i class="fas fa-certificate"></i>
+                            <h3>THM</h3>
+                            <p>TryHackMe Certifications</p>
+                            <ul class="cert-list">
+                                <li>Pre Security</li>
+                                <li>Complete Beginner</li>
+                                <li>Web Fundamentals</li>
+                                <li>Jr. Penetration Tester</li>
+                                <li>Offensive Pentesting</li>
+                                <li>Red Team Fundamentals</li>
+                                <li>SOC level 1</li>
+                            </ul>
+                        </a>
+                        <a href="#" target="_blank" class="skill-card">
+                            <i class="fas fa-certificate"></i>
+                            <h3>En Cours</h3>
+                            <p>Prochaines certifications visées</p>
+                            <ul class="cert-list">
+                                <li>CBBH</li>
+                                <li>TCM PIPA</li>
+                                <li>eCPPT</li>
+                            </ul>
+                        </a>
+                    </div>
+                </section>
+
+                <section id="blog" class="blog-section">
+                    <h2>Blog</h2>
+                    <div class="blog-grid">
+                        <a href="#" target="_blank" class="blog-card">
+                            <div class="blog-header">
+                                <span class="blog-category">HTB</span>
+                                <span class="blog-date">2024-03-15</span>
+                            </div>
+                            <h3>Write-up: MachineName</h3>
+                            <p>Description détaillée de la résolution d'une machine HackTheBox, incluant les vulnérabilités trouvées et les techniques utilisées.</p>
+                            <div class="blog-tags">
+                                <span>#Pentest</span>
+                                <span>#PrivEsc</span>
+                                <span>#Web</span>
+                            </div>
+                            <span class="read-more">Lire l'article <i class="fas fa-arrow-right"></i></span>
+                        </a>
+
+                        <a href="#" target="_blank" class="blog-card">
+                            <div class="blog-header">
+                                <span class="blog-category">THM</span>
+                                <span class="blog-date">2024-03-10</span>
+                            </div>
+                            <h3>Write-up: RoomName</h3>
+                            <p>Analyse complète d'une room TryHackMe, détaillant les étapes de résolution et les concepts de sécurité abordés.</p>
+                            <div class="blog-tags">
+                                <span>#CTF</span>
+                                <span>#Forensics</span>
+                                <span>#Crypto</span>
+                            </div>
+                            <span class="read-more">Lire l'article <i class="fas fa-arrow-right"></i></span>
+                        </a>
+
+                        <a href="#" target="_blank" class="blog-card">
+                            <div class="blog-header">
+                                <span class="blog-category">Article</span>
+                                <span class="blog-date">2024-03-05</span>
+                            </div>
+                            <h3>Les bonnes pratiques en cybersécurité</h3>
+                            <p>Guide complet sur les meilleures pratiques à adopter pour sécuriser ses systèmes et données.</p>
+                            <div class="blog-tags">
+                                <span>#Sécurité</span>
+                                <span>#BestPractices</span>
+                                <span>#Guide</span>
+                            </div>
+                            <span class="read-more">Lire l'article <i class="fas fa-arrow-right"></i></span>
+                        </a>
+                    </div>
+                </section>
+            </div>
+
+            <div class="modal-footer">
+                <a href="./pages/contact.html" class="animate-btn">Contactez-moi</a>
+            </div>
+        </div>
+    </div>
+    <script src="./static/script.js"></script>
+</body>
+</html> 

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Portfolio Sil3ntPurr</title>
+    <link rel="stylesheet" href="../static/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="side-menu">
+        <ul>
+            <li><a href="../index.html"><i class="fas fa-user"></i> À propos</a></li>
+            <li><a href="./skills.html"><i class="fas fa-cogs"></i> Compétences</a></li>
+            <li><a href="./certifications.html"><i class="fas fa-certificate"></i> Certifications</a></li>
+            <li><a href="./blog.html" class="active"><i class="fas fa-blog"></i> Blog</a></li>
+            <li><a href="./contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="modal-overlay active">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="profile-container">
+                    <img src="../assets/me.png" alt="Profile" class="profile-image">
+                    <div class="animation-box">
+                        <div class="circle"></div>
+                        <div class="square"></div>
+                        <div class="triangle"></div>
+                    </div>
+                </div>
+                <h1 class="title">Mon Blog</h1>
+                <p class="subtitle">Articles sur la cybersécurité</p>
+            </div>
+            
+            <div class="modal-body">
+                <section class="blog-section">
+                    <div class="blog-grid">
+                        <article class="blog-card">
+                            <div class="blog-header">
+                                <span class="blog-category">Pentesting</span>
+                                <span class="blog-date">28 Avril 2024</span>
+                            </div>
+                            <h3>Les bases du pentesting web</h3>
+                            <p>Introduction aux techniques de test d'intrusion sur les applications web...</p>
+                            <div class="blog-tags">
+                                <span>Web Security</span>
+                                <span>OWASP</span>
+                            </div>
+                            <a href="#" class="read-more">Lire la suite <i class="fas fa-arrow-right"></i></a>
+                        </article>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <script src="../static/script.js"></script>
+</body>
+</html>
