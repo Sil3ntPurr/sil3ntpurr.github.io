@@ -184,6 +184,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <h2>OULAH !</h2>
                 <p>EH !</p>
                 <p>slc nysqc q'gknmqc ?</p>
+                <p><i>maybe it's a special kind of cipher ... ?</i></p>
             </div>
         </div>
     `;
