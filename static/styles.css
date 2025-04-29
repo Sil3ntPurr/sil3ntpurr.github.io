@@ -1984,37 +1984,35 @@ h1:hover, h2:hover, h3:hover {
     .skills-grid, .certifications-grid, .blog-grid, .challenges-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
-        padding: 1rem;
+        padding: 0;
+        width: 100%;
     }
 
     .skill-card, .certification-card, .blog-card, .challenge-card {
         width: 100%;
         min-height: 300px;
         padding: 1.5rem;
+        margin: 0;
+        border-radius: 0;
     }
 
-    .skill-card h3, .certification-card h3, .blog-card h3, .challenge-card h3 {
-        font-size: 1.5rem;
-    }
-
-    .skill-card p, .certification-card p, .blog-card p, .challenge-card p {
-        font-size: 1.1rem;
-    }
-
-    .skill-list, .cert-list {
-        font-size: 1.1rem;
+    .container {
+        padding: 0;
+        width: 100%;
+        max-width: 100%;
+        border-radius: 0;
     }
 }
 
 @media (max-width: 480px) {
     .skills-grid, .certifications-grid, .blog-grid, .challenges-grid {
-        gap: 1.5rem;
-        padding: 0.5rem;
+        gap: 1rem;
+        padding: 0;
     }
 
     .skill-card, .certification-card, .blog-card, .challenge-card {
         min-height: 250px;
-        padding: 1.2rem;
+        padding: 1rem;
     }
 
     .skill-card h3, .certification-card h3, .blog-card h3, .challenge-card h3 {
