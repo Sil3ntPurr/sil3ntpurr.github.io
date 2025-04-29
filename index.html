@@ -9,15 +9,22 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <nav class="side-menu">
-        <ul>
-            <li><a href="./index.html#about" class="active"><i class="fas fa-user"></i> À propos</a></li>
-            <li><a href="./pages/skills.html"><i class="fas fa-cogs"></i> Compétences</a></li>
-            <li><a href="./pages/certifications.html"><i class="fas fa-certificate"></i> Certifications</a></li>
-            <li><a href="./pages/blog.html"><i class="fas fa-blog"></i> Blog</a></li>
-            <li><a href="./pages/contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
-        </ul>
-    </nav>
+        <button class="burger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav class="side-menu">
+            <button class="close-menu">&times;</button>
+            <ul>
+                <li><a href="../index.html"><i class="fas fa-user"></i> À propos</a></li>
+                <li><a href="pages/skills.html"><i class="fas fa-cogs"></i> Compétences</a></li>
+                <li><a href="pages/certifications.html" class="active"><i class="fas fa-certificate"></i> Certifications</a></li>
+                <li><a href="pages/blog.html"><i class="fas fa-blog"></i> Blog</a></li>
+                <li><a href="pages/challenge.html"><i class="fas fa-trophy"></i> Mini chall</a></li>
+                <li><a href="pages/contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
+        </nav>
 
     <div class="modal-overlay" id="modal">
         <div class="modal-content">
@@ -106,42 +113,12 @@
                                 <span class="blog-category">HTB</span>
                                 <span class="blog-date">2024-03-15</span>
                             </div>
-                            <h3>Write-up: MachineName</h3>
-                            <p>Description détaillée de la résolution d'une machine HackTheBox, incluant les vulnérabilités trouvées et les techniques utilisées.</p>
+                            <h3>En cours de construction</h3>
+                            <p>Pas de blog pour le moment car il est en construction.</p>
                             <div class="blog-tags">
                                 <span>#Pentest</span>
                                 <span>#PrivEsc</span>
                                 <span>#Web</span>
-                            </div>
-                            <span class="read-more">Lire l'article <i class="fas fa-arrow-right"></i></span>
-                        </a>
-
-                        <a href="#" target="_blank" class="blog-card">
-                            <div class="blog-header">
-                                <span class="blog-category">THM</span>
-                                <span class="blog-date">2024-03-10</span>
-                            </div>
-                            <h3>Write-up: RoomName</h3>
-                            <p>Analyse complète d'une room TryHackMe, détaillant les étapes de résolution et les concepts de sécurité abordés.</p>
-                            <div class="blog-tags">
-                                <span>#CTF</span>
-                                <span>#Forensics</span>
-                                <span>#Crypto</span>
-                            </div>
-                            <span class="read-more">Lire l'article <i class="fas fa-arrow-right"></i></span>
-                        </a>
-
-                        <a href="#" target="_blank" class="blog-card">
-                            <div class="blog-header">
-                                <span class="blog-category">Article</span>
-                                <span class="blog-date">2024-03-05</span>
-                            </div>
-                            <h3>Les bonnes pratiques en cybersécurité</h3>
-                            <p>Guide complet sur les meilleures pratiques à adopter pour sécuriser ses systèmes et données.</p>
-                            <div class="blog-tags">
-                                <span>#Sécurité</span>
-                                <span>#BestPractices</span>
-                                <span>#Guide</span>
                             </div>
                             <span class="read-more">Lire l'article <i class="fas fa-arrow-right"></i></span>
                         </a>

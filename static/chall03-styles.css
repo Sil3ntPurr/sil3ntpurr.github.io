@@ -1,0 +1,520 @@
+/* Thème de l'enfer */
+body.hell-theme {
+    background: linear-gradient(135deg, #1a0000 0%, #330000 100%);
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+/* Menu latéral */
+.hell-theme .side-menu {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 250px;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    padding: 2rem 0;
+    transform: translateX(0);
+    transition: transform 0.3s ease;
+    border-right: 1px solid #ff0000;
+}
+
+.hell-theme .side-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.hell-theme .side-menu li {
+    margin: 0.5rem 0;
+}
+
+.hell-theme .side-menu a {
+    display: flex;
+    align-items: center;
+    padding: 1rem 2rem;
+    color: #ff3333;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.hell-theme .side-menu a i {
+    margin-right: 1rem;
+    font-size: 1.2rem;
+    color: #ff0000;
+    transition: transform 0.3s ease;
+}
+
+.hell-theme .side-menu a:hover {
+    background: rgba(255, 0, 0, 0.2);
+    color: #ff0000;
+}
+
+.hell-theme .side-menu a:hover i {
+    transform: scale(1.2);
+}
+
+.hell-theme .side-menu a.active {
+    background: rgba(255, 0, 0, 0.3);
+    color: #ff0000;
+}
+
+.hell-theme .side-menu a.active i {
+    color: #ff0000;
+}
+
+.hell-theme .close-menu {
+    color: #ff0000;
+}
+
+.hell-theme .close-menu:hover {
+    color: #ff3333;
+}
+
+/* Overlay et contenu modal */
+.hell-theme .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.hell-theme .modal-content {
+    background: linear-gradient(135deg, #2a0000 0%, #1a0000 100%);
+    border-radius: 15px;
+    width: 90%;
+    max-width: 1200px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 0 30px rgba(255, 0, 0, 0.3);
+    border: 1px solid #ff0000;
+    position: relative;
+}
+
+.hell-theme .modal-header {
+    padding: 2rem;
+    text-align: center;
+    border-bottom: 1px solid #ff0000;
+    position: relative;
+}
+
+.hell-theme .modal-body {
+    padding: 2rem;
+}
+
+/* Titres et textes */
+.hell-theme .hell-title {
+    color: #ff0000;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+}
+
+.hell-theme .hell-subtitle {
+    color: #ff3333;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.hell-theme .hell-h2 {
+    color: #ff0000;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 0 5px rgba(255, 0, 0, 0.3);
+}
+
+.hell-theme .hell-text {
+    color: #ffcccc;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+/* Conteneur de profil */
+.hell-theme .profile-container {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 2rem;
+}
+
+.hell-theme .profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #ff0000;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+    position: relative;
+    z-index: 2;
+}
+
+/* Animations */
+.hell-theme .animation-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.hell-theme .circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    border: 2px solid rgba(255, 0, 0, 0.3);
+    border-radius: 50%;
+    animation: hellPulse 2s infinite;
+}
+
+.hell-theme .square {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    width: 80%;
+    height: 80%;
+    border: 2px solid rgba(255, 0, 0, 0.2);
+    animation: hellRotate 10s linear infinite;
+}
+
+.hell-theme .triangle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(30deg);
+    width: 60%;
+    height: 60%;
+    border: 2px solid rgba(255, 0, 0, 0.1);
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    animation: hellRotate 15s linear infinite reverse;
+}
+
+/* Challenge info */
+.hell-theme .challenge-info {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border: 1px solid #ff0000;
+}
+
+.hell-theme .challenge-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+.hell-theme .challenge-difficulty {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.hell-theme .challenge-difficulty.hard {
+    background-color: #ff0000;
+    color: #fff;
+}
+
+.hell-theme .challenge-date {
+    color: #ff3333;
+}
+
+/* Challenge box */
+.hell-theme .challenge-box {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border: 1px solid #ff0000;
+}
+
+.hell-theme .challenge-box h3 {
+    color: #ff0000;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.hell-theme .challenge-box i {
+    color: #ff0000;
+}
+
+/* Crypto text */
+.hell-theme .crypto-text {
+    background: #1a0000;
+    padding: 1rem;
+    border-radius: 5px;
+    font-family: monospace;
+    font-size: 1.2rem;
+    color: #ff0000;
+    margin: 1rem 0;
+    border: 1px solid #ff0000;
+    text-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+}
+
+/* Download link */
+.hell-theme .download-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    background: #2a0000;
+    color: #ff0000;
+    text-decoration: none;
+    border: 2px solid #ff0000;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+
+.hell-theme .download-link:hover {
+    background: #ff0000;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
+}
+
+.hell-theme .download-link i {
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+.hell-theme .download-link:hover i {
+    transform: translateY(-2px);
+}
+
+/* Solution box */
+.hell-theme .solution-box {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 1.5rem;
+    border: 1px solid #ff0000;
+}
+
+.hell-theme .solution-box h3 {
+    color: #ff0000;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.hell-theme .solution-box i {
+    color: #ff0000;
+}
+
+.hell-theme .hell-list {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.hell-theme .hell-list li {
+    color: #ffcccc;
+    margin: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.hell-theme .hell-list li::before {
+    content: "🔥";
+    position: absolute;
+    left: 0;
+}
+
+/* Back button */
+.hell-theme .back-button {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    background: #2a0000;
+    color: #ff0000;
+    text-decoration: none;
+    border: 2px solid #ff0000;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.hell-theme .back-button:hover {
+    background: #ff0000;
+    color: #fff;
+    transform: translateX(-5px);
+    box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
+}
+
+.hell-theme .back-button i {
+    transition: transform 0.3s ease;
+}
+
+.hell-theme .back-button:hover i {
+    transform: translateX(-3px);
+}
+
+/* Menu Burger */
+.hell-theme .burger-menu {
+    display: none;
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    z-index: 1001;
+    background: rgba(0, 0, 0, 0.7);
+    border: 1px solid #ff0000;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 0.5rem;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hell-theme .burger-menu span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #ff0000;
+    margin: 3px 0;
+    transition: all 0.3s ease;
+}
+
+.hell-theme .burger-menu.active span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hell-theme .burger-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hell-theme .burger-menu.active span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.hell-theme .burger-menu:hover span {
+    background-color: #ff3333;
+}
+
+/* Animations */
+@keyframes hellPulse {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.5;
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.1);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.5;
+    }
+}
+
+@keyframes hellRotate {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .hell-theme .burger-menu {
+        display: flex;
+    }
+
+    .hell-theme .side-menu {
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .hell-theme .side-menu.active {
+        transform: translateX(0);
+    }
+
+    .hell-theme .side-menu ul {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .hell-theme .side-menu li {
+        width: 100%;
+        margin: 0.5rem 0;
+    }
+
+    .hell-theme .side-menu a {
+        padding: 1rem;
+        width: 100%;
+        text-align: left;
+    }
+
+    .hell-theme .modal-content {
+        width: 95%;
+        margin: 1rem;
+        padding: 1rem;
+    }
+
+    .hell-theme .profile-container {
+        width: 120px;
+        height: 120px;
+    }
+
+    .hell-theme .hell-title {
+        font-size: 1.8rem;
+    }
+
+    .hell-theme .hell-subtitle {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hell-theme .burger-menu {
+        display: flex;
+        top: 0.5rem;
+        left: 0.5rem;
+    }
+
+    .hell-theme .hell-title {
+        font-size: 1.5rem;
+    }
+
+    .hell-theme .hell-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .hell-theme .profile-container {
+        width: 100px;
+        height: 100px;
+    }
+} 

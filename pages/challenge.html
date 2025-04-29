@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Challenges - Portfolio Sil3ntPurr</title>
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+    <link rel="stylesheet" href="../static/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <button class="burger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    <nav class="side-menu">
+        <button class="close-menu">&times;</button>
+        <ul>
+            <li><a href="../index.html"><i class="fas fa-user"></i> À propos</a></li>
+            <li><a href="./skills.html"><i class="fas fa-cogs"></i> Compétences</a></li>
+            <li><a href="./certifications.html" class="active"><i class="fas fa-certificate"></i> Certifications</a></li>
+            <li><a href="./blog.html"><i class="fas fa-blog"></i> Blog</a></li>
+            <li><a href="./challenge.html"><i class="fas fa-trophy"></i> Mini chall</a></li>
+            <li><a href="./contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="modal-overlay active">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="profile-container">
+                    <img src="../assets/me.png" alt="Profile" class="profile-image">
+                    <div class="animation-box">
+                        <div class="circle"></div>
+                        <div class="square"></div>
+                        <div class="triangle"></div>
+                    </div>
+                </div>
+                <h1 class="title">Mini Challenges</h1>
+                <p class="subtitle">Défis de cybersécurité</p>
+            </div>
+            
+            <div class="modal-body">
+                <div class="challenge-content">
+                    <h2>Mini Challenges</h2>
+                    <p>Bienvenue dans la section des mini challenges ! Ici, vous trouverez une série de défis de sécurité informatique pour tester vos compétences.</p>
+                    
+                    <div class="info-box">
+                        <h3><i class="fas fa-info-circle"></i> Information importante</h3>
+                        <p>Pour certains challenges, des fichiers supplémentaires peuvent être nécessaires. Ces fichiers sont disponibles sur mon serveur Discord. N'hésitez pas à nous rejoindre pour y avoir accès ! (en construction)</p>
+                    </div>
+
+                    <section class="challenges-section">
+                        <div class="challenges-grid">
+                            <div class="challenge-card">
+                                <div class="challenge-header">
+                                    <span class="challenge-difficulty easy">Facile</span>
+                                    <span class="challenge-date">28 Avril 2024</span>
+                                </div>
+                                <h3>Challenge #1: Code Chaos</h3>
+                                <p>Cet code est bizzare mais je n'arrive pas a mettre le pourquoi du comment ...</p>
+                                <div class="challenge-tags">
+                                    <span>#CodeAnalysis</span>
+                                    <span>#Débutant</span>
+                                </div>
+                                <a href="./chall/chall-01.html" class="challenge-link">Voir le challenge <i class="fas fa-arrow-right"></i></a>
+                            </div>
+
+                            <div class="challenge-card">
+                                <div class="challenge-header">
+                                    <span class="challenge-difficulty medium">Moyen</span>
+                                    <span class="challenge-date">28 Avril 2024</span>
+                                </div>
+                                <h3>Challenge #2: We got him !</h3>
+                                <p>Nous avons récupérer le disque d'un criminel, ta mission et de récupérer les datas et fouiller dans les fichiers pour trouver sont secret !</p>
+                                <div class="challenge-tags">
+                                    <span>#Forensics</span>
+                                    <span>#Recovery</span>
+                                </div>
+                                <a href="./chall/chall-02.html" class="challenge-link">En création<i class="fas fa-arrow-right"></i></a>
+                            </div>
+
+                            <div class="challenge-card">
+                                <div class="challenge-header">
+                                    <span class="challenge-difficulty hard">Difficile</span>
+                                    <span class="challenge-date">28 Avril 2024</span>
+                                </div>
+                                <h3>Challenge #3: We burn in hell</h3>
+                                <p>j'ai compiler mon code golang mais je ne comprend pas pourquoi mon fichier fait planter mon ordinateur pourrais tu m'aider ?</p>
+                                <div class="challenge-tags">
+                                    <span>#RE</span>
+                                    <span>#Pwn</span>
+                                </div>
+                                <a href="./chall/chall-03.html" class="challenge-link">En création<i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../static/script.js"></script>
+</body>
+</html> 

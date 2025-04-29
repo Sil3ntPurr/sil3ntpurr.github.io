@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge #1: Analyse de Code - Portfolio Sil3ntPurr</title>
+    <link rel="icon" type="image/x-icon" href="../../assets/favicon.ico">
+    <link rel="stylesheet" href="../../static/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="modal-overlay active">
+        <div class="modal-content">
+            <div class="modal-header">
+                <a href="../challenge.html" class="back-button">
+                    <i class="fas fa-arrow-left"></i> Retour
+                </a>
+                <div class="profile-container">
+                    <img src="../../assets/me.png" alt="Profile" class="profile-image">
+                    <div class="animation-box">
+                        <div class="circle"></div>
+                        <div class="square"></div>
+                        <div class="triangle"></div>
+                    </div>
+                </div>
+                <h1 class="title">Challenge #1: Code Chaos</h1>
+                <p class="subtitle">Trouvez la vulnérabilité</p>
+            </div>
+            
+            <div class="modal-body">
+                <section class="challenge-section">
+                    <div class="challenge-info">
+                        <div class="challenge-header">
+                            <span class="challenge-difficulty easy">Facile</span>
+                            <span class="challenge-date">28 Avril 2024</span>
+                        </div>
+                        
+                        <div class="challenge-content">
+                            <h2>Description</h2>
+                            <p>Vous êtes en train d'auditer le code d'une application web qui permet aux utilisateurs d'uploader des images de profil. Voici le code PHP qui gère l'upload des fichiers :</p>
+                            
+                            <div class="challenge-box">
+                                <h3>Code source :</h3>
+                                <pre class="code-text"><code class="language-php">&lt;?php
+$X7f9 = 'uploads/';
+$Kj2m = array('jpg', 'jpeg', 'png', 'gif');
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if (isset($_FILES['file'])) {
+        $Pq4n = $_FILES['file'];
+        $R8t3 = $Pq4n['name'];
+        $L5v1 = $Pq4n['tmp_name'];
+        
+        if ($Pq4n['size'] > 5000000) {
+            die("Cela n'est pas possible.");
+        }
+        
+        $M2w8 = strtolower(pathinfo($R8t3, PATHINFO_EXTENSION));
+        if (!in_array($M2w8, $Kj2m)) {
+            die("Le type n'est pas autorisé.");
+        }
+        
+        $B6y4 = uniqid() . '.' . $M2w8;
+        $N9z7 = $X7f9 . $B6y4;
+        
+        if (move_uploaded_file($L5v1, $N9z7)) {
+            echo "Success.";
+        } else {
+            die("Error.");
+        }
+    }
+}
+?&gt;</code></pre>
+                            </div>
+                            <div class="challenge-box">
+                                <h3>Questions :</h3>
+                                <ol>
+                                    <li>Quelle est la vulnérabilité présente dans ce code ?</li>
+                                    <li>Comment pourrait-on l'exploiter pour exécuter du code PHP sur le serveur ?</li>
+                                    <li>Quelles sont les solutions pour sécuriser ce code ?</li>
+                                </ol>
+                                <div class="solution-box">
+                                    <h3><i class="fas fa-key"></i> Solution</h3>
+                                    <p>Tu as la réponse ?</p>
+                                    <p>Envoie la moi par mail (objet : Chall-01 Sil3ntChall)</p>
+                                    <p>sil3ntpurr@tutamail.com</p>
+                                    <p>sinon ouvrez un tickets aves les 2 réponses sur le discord. (en cours)</p>
+                                    <ul class="solution-list">
+                                        <li>📝 Write-up détaillé</li>
+                                        <li>🔑 Message secret trouvé</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <script src="../../static/script.js"></script>
+</body>
+</html> 

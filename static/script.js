@@ -1,15 +1,79 @@
 document.addEventListener('DOMContentLoaded', () => {
+    console.log('DOM chargé');
     const modal = document.getElementById('modal');
     const sideMenu = document.querySelector('.side-menu');
+    const burgerMenu = document.querySelector('.burger-menu');
+    const closeButton = document.querySelector('.close-menu');
     const sections = document.querySelectorAll('.modal-body section');
     const skillCards = document.querySelectorAll('.skill-card');
 
+    console.log('Burger menu:', burgerMenu);
+    console.log('Side menu:', sideMenu);
+    console.log('Close button:', closeButton);
+
+    // Gestion du menu burger
+    if (burgerMenu && sideMenu) {
+        burgerMenu.addEventListener('click', (e) => {
+            console.log('Clic sur le burger menu');
+            e.stopPropagation();
+            burgerMenu.classList.toggle('active');
+            sideMenu.classList.toggle('active');
+            console.log('Classes après toggle:', {
+                burger: burgerMenu.classList.contains('active'),
+                side: sideMenu.classList.contains('active')
+            });
+        });
+
+        // Fermer le menu en cliquant en dehors
+        document.addEventListener('click', (e) => {
+            if (window.innerWidth <= 768) {
+                if (!sideMenu.contains(e.target) && !burgerMenu.contains(e.target)) {
+                    console.log('Clic en dehors du menu');
+                    burgerMenu.classList.remove('active');
+                    sideMenu.classList.remove('active');
+                }
+            }
+        });
+
+        // Empêcher la fermeture du menu quand on clique dedans
+        sideMenu.addEventListener('click', (e) => {
+            console.log('Clic dans le menu');
+            e.stopPropagation();
+        });
+
+        // Gestion du redimensionnement de la fenêtre
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) {
+                console.log('Redimensionnement > 768px');
+                burgerMenu.classList.remove('active');
+                sideMenu.classList.remove('active');
+            }
+        });
+
+        // Fermer le menu quand on clique sur un lien
+        const menuLinks = sideMenu.querySelectorAll('a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 768) {
+                    console.log('Clic sur un lien');
+                    burgerMenu.classList.remove('active');
+                    sideMenu.classList.remove('active');
+                }
+            });
+        });
+
+        // Gestion du bouton de fermeture
+        if (closeButton) {
+            closeButton.addEventListener('click', () => {
+                console.log('Clic sur le bouton de fermeture');
+                burgerMenu.classList.remove('active');
+                sideMenu.classList.remove('active');
+            });
+        }
+    }
+
     setTimeout(() => {
         modal.classList.add('active');
-        setTimeout(() => {
-            sideMenu.style.opacity = '1';
-            sideMenu.style.transform = 'translateX(0)';
-        }, 300);
     }, 500);
 
     const observer = new IntersectionObserver((entries) => {
@@ -202,6 +266,26 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('click', function(event) {
         if (event.target === easterEggModal) {
             easterEggModal.style.display = 'none';
+        }
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const menuButton = document.querySelector('.menu-button');
+    const sideMenu = document.querySelector('.side-menu');
+    const closeButton = document.querySelector('.close-menu');
+
+    menuButton.addEventListener('click', function() {
+        sideMenu.classList.toggle('active');
+    });
+
+    closeButton.addEventListener('click', function() {
+        sideMenu.classList.remove('active');
+    });
+
+    document.addEventListener('click', function(event) {
+        if (!sideMenu.contains(event.target) && !menuButton.contains(event.target)) {
+            sideMenu.classList.remove('active');
         }
     });
 }); 
