@@ -11,7 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log('Side menu:', sideMenu);
     console.log('Close button:', closeButton);
 
-    // Gestion du menu burger
     if (burgerMenu && sideMenu) {
         burgerMenu.addEventListener('click', (e) => {
             console.log('Clic sur le burger menu');
@@ -24,7 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
 
-        // Fermer le menu en cliquant en dehors
         document.addEventListener('click', (e) => {
             if (window.innerWidth <= 768) {
                 if (!sideMenu.contains(e.target) && !burgerMenu.contains(e.target)) {
@@ -35,13 +33,11 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // Empêcher la fermeture du menu quand on clique dedans
         sideMenu.addEventListener('click', (e) => {
             console.log('Clic dans le menu');
             e.stopPropagation();
         });
 
-        // Gestion du redimensionnement de la fenêtre
         window.addEventListener('resize', () => {
             if (window.innerWidth > 768) {
                 console.log('Redimensionnement > 768px');
@@ -50,7 +46,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // Fermer le menu quand on clique sur un lien
         const menuLinks = sideMenu.querySelectorAll('a');
         menuLinks.forEach(link => {
             link.addEventListener('click', () => {
@@ -62,7 +57,6 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
 
-        // Gestion du bouton de fermeture
         if (closeButton) {
             closeButton.addEventListener('click', () => {
                 console.log('Clic sur le bouton de fermeture');
@@ -288,4 +282,55 @@ document.addEventListener('DOMContentLoaded', function() {
             sideMenu.classList.remove('active');
         }
     });
-}); 
+});
+
+
+const MAX_PETALS = 100;
+let petalCount = 0;
+
+function createPetal() {
+    if (petalCount >= MAX_PETALS) return;
+    
+    const petal = document.createElement('div');
+    petal.className = 'petal';
+    
+    const startPosition = Math.random() < 0.7 
+        ? Math.random() * window.innerWidth * 0.7 + window.innerWidth * 0.5  
+        : Math.random() * window.innerWidth * 0.4;  
+    
+    petal.style.left = `${startPosition}px`;
+    petal.style.top = '-50px';   
+    
+    const size = Math.random() * 20 + 25;
+    petal.style.width = `${size}px`;
+    petal.style.height = `${size}px`;
+    
+    petal.style.animation = 'falling 4s linear forwards';
+    petal.style.animationDelay = `${Math.random() * 0.3}s`;
+    
+    document.body.appendChild(petal);
+    petalCount++;
+    
+    petal.addEventListener('animationend', () => {
+        petal.remove();
+        petalCount--;
+    });
+}
+
+function startCherryBlossomAnimation() {
+    if (document.visibilityState === 'visible') {
+        setInterval(createPetal, 200);
+    }
+}
+
+document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState === 'hidden') {
+        const petals = document.querySelectorAll('.petal');
+        petals.forEach(petal => petal.remove());
+        petalCount = 0;
+    } else {
+        startCherryBlossomAnimation();
+    }
+});
+
+startCherryBlossomAnimation(); 
